@@ -70,13 +70,21 @@ const HomePage = () => {
             </HStack>
             <HStack>
               <Text fontWeight="medium">GitHub:</Text>
-              <Link href="https://github.com/your-handle" isExternal>
+              <Link
+                href="https://github.com/your-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 github.com/your-handle
               </Link>
             </HStack>
             <HStack>
               <Text fontWeight="medium">LinkedIn:</Text>
-              <Link href="https://linkedin.com/in/your-handle" isExternal>
+              <Link
+                href="https://linkedin.com/in/your-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 linkedin.com/in/your-handle
               </Link>
             </HStack>

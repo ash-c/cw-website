@@ -1,4 +1,4 @@
-import { Box, Button, Heading, SimpleGrid, Tag, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, Link, SimpleGrid, Tag, Text, VStack } from "@chakra-ui/react";
 import { projects } from "../data/projects";
 
 const ProjectsPage = () => {
@@ -29,16 +29,9 @@ const ProjectsPage = () => {
                 ))}
               </Box>
               {project.link && (
-                <Button
-                  as="a"
-                  href={project.link}
-                  size="sm"
-                  variant="outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </Button>
+                <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline">View Project</Button>
+                </Link>
               )}
             </VStack>
           </Box>
