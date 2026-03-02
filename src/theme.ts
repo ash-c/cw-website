@@ -1,6 +1,3 @@
-import { defaultSystem } from "@chakra-ui/react";
+import { defaultSystem } from '@chakra-ui/react';
 
-const system = defaultSystem;
-
-export default system;
-
+export const system = defaultSystem;
