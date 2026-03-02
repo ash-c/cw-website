@@ -4,6 +4,8 @@ const typescriptEslint = require('typescript-eslint');
 const react = require('eslint-plugin-react');
 const reactHooks = require('eslint-plugin-react-hooks');
 const jsxA11y = require('eslint-plugin-jsx-a11y');
+const prettierPlugin = require('eslint-plugin-prettier');
+const eslintPluginImport = require('eslint-plugin-import');
 
 module.exports = [
   js.configs.recommended,
@@ -26,6 +28,8 @@ module.exports = [
       react,
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
+      prettier: prettierPlugin,
+      import: eslintPluginImport,
     },
     settings: {
       react: {
@@ -39,6 +43,8 @@ module.exports = [
       ...jsxA11y.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'prettier/prettier': 'error',
+      'import/no-default-export': 'error',
     },
   },
   {

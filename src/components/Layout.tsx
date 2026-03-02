@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
-import { Box, Container } from "@chakra-ui/react";
-import NavBar from "./NavBar";
+import { ReactNode } from 'react';
+import { Box, Container } from '@chakra-ui/react';
+import { NavBar } from './NavBar';
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <Box minH="100vh">
       <NavBar />
@@ -16,6 +16,3 @@ const Layout = ({ children }: LayoutProps) => {
     </Box>
   );
 };
-
-export default Layout;
-

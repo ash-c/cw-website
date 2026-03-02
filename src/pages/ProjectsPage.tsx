@@ -1,21 +1,27 @@
-import { Box, Button, Heading, Link, SimpleGrid, Tag, Text, VStack } from "@chakra-ui/react";
-import { projects } from "../data/projects";
+import { Box, Button, Heading, Link, SimpleGrid, Tag, Text, VStack } from '@chakra-ui/react';
+import { projects } from '../data/projects';
 
-const ProjectsPage = () => {
+export const ProjectsPage = () => {
   return (
     <VStack align="flex-start" gap={6}>
       <Heading as="h1" size="lg">
         Projects
       </Heading>
       <Text color="gray.500" maxW="2xl">
-        A selection of projects you have worked on. Replace these placeholders
-        with real applications, libraries, or contributions you want to
-        highlight.
+        A selection of projects you have worked on. Replace these placeholders with real
+        applications, libraries, or contributions you want to highlight.
       </Text>
 
       <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="full">
         {projects.map((project) => (
-            <Box key={project.title} bg="white" borderWidth="1px" borderColor="gray.200" borderRadius="lg" p={6}>
+          <Box
+            key={project.title}
+            bg="white"
+            borderWidth="1px"
+            borderColor="gray.200"
+            borderRadius="lg"
+            p={6}
+          >
             <Heading as="h2" size="md" mb={2}>
               {project.title}
             </Heading>
@@ -30,7 +36,9 @@ const ProjectsPage = () => {
               </Box>
               {project.link && (
                 <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline">View Project</Button>
+                  <Button size="sm" variant="outline">
+                    View Project
+                  </Button>
                 </Link>
               )}
             </VStack>
@@ -40,6 +48,3 @@ const ProjectsPage = () => {
     </VStack>
   );
 };
-
-export default ProjectsPage;
-
