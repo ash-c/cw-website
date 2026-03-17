@@ -58,11 +58,23 @@ export const HomePage = () => {
           <VStack align="flex-start" gap={2}>
             <HStack>
               <Text fontWeight="medium">Email:</Text>
-              <Link href="mailto:you@example.com">you@example.com</Link>
+              <Link
+                href="mailto:you@example.com"
+                color="primary.600"
+                _hover={{ color: 'primary.700', textDecoration: 'underline' }}
+              >
+                you@example.com
+              </Link>
             </HStack>
             <HStack>
               <Text fontWeight="medium">GitHub:</Text>
-              <Link href="https://github.com/your-handle" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/your-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="primary.600"
+                _hover={{ color: 'primary.700', textDecoration: 'underline' }}
+              >
                 github.com/your-handle
               </Link>
             </HStack>
@@ -72,6 +84,8 @@ export const HomePage = () => {
                 href="https://linkedin.com/in/your-handle"
                 target="_blank"
                 rel="noopener noreferrer"
+                color="primary.600"
+                _hover={{ color: 'primary.700', textDecoration: 'underline' }}
               >
                 linkedin.com/in/your-handle
               </Link>

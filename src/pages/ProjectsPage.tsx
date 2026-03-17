@@ -29,14 +29,32 @@ export const ProjectsPage = () => {
             <VStack align="flex-start" gap={3}>
               <Box>
                 {project.techStack.map((tech) => (
-                  <Tag.Root key={tech} size="sm">
+                  <Tag.Root
+                    key={tech}
+                    size="sm"
+                    variant="subtle"
+                    bg="highlight.100"
+                    color="highlight.900"
+                  >
                     <Tag.Label>{tech}</Tag.Label>
                   </Tag.Root>
                 ))}
               </Box>
               {project.link && (
-                <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" variant="outline">
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  _hover={{ textDecoration: 'none' }}
+                >
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    borderColor="primary.500"
+                    color="primary.600"
+                    _hover={{ bg: 'primary.50', borderColor: 'primary.600' }}
+                    _active={{ bg: 'primary.100' }}
+                  >
                     View Project
                   </Button>
                 </Link>
