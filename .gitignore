@@ -50,7 +50,3 @@ coverage/
 out/
 storybook-static/
 
-### Cursor / editor AI
-.cursor/
-.history/
-
