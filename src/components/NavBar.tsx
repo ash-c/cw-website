@@ -14,7 +14,7 @@ export const NavBar = () => {
     >
       <Flex maxW="6xl" mx="auto" px={4} py={3} align="center" justify="space-between">
         <Text fontWeight="bold" color="primary.700">
-          Software Engineer
+          Code Wizardry
         </Text>
         <HStack gap={4} align="center">
           <ChakraLink
