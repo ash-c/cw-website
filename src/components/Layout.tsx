@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import { Box, Container } from '@chakra-ui/react';
+import { Container, Flex } from '@chakra-ui/react';
 import { NavBar } from './NavBar';
+import { Footer } from './Footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -8,11 +9,12 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box minH="100vh">
+    <Flex flexDir="column" minH="100vh">
       <NavBar />
-      <Container maxW="6xl" px={4} py={8}>
+      <Container flex="1" maxW="6xl" px={4} py={8}>
         {children}
       </Container>
-    </Box>
+      <Footer />
+    </Flex>
   );
 };
