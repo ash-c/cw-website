@@ -1,36 +1,43 @@
 import { Box, Container, Heading, HStack, SimpleGrid, Tag, Text } from '@chakra-ui/react';
 
-const services = [
+const skillGroups = [
   {
-    title: 'Custom website builds',
-    description:
-      'Placeholder: bespoke websites designed around your business, brand, and customers.',
+    title: 'Front-end',
+    description: 'TypeScript, JavaScript, and React, with GraphQL and Apollo for data fetching.',
   },
   {
-    title: 'Responsive design',
-    description:
-      'Placeholder: sites that look great and work smoothly on phones, tablets, and desktops.',
+    title: 'Back-end & cloud',
+    description: 'Node.js, GraphQL APIs, AWS, Serverless, and event streaming with Kafka.',
   },
   {
-    title: 'Ongoing maintenance',
+    title: 'Soft skills',
     description:
-      'Placeholder: updates, hosting support, and improvements to keep your site secure and current.',
+      'Teamwork, mentoring, problem solving, communication, quick learning, and customer service face-to-face, by phone, and online.',
   },
 ];
 
-const skills = ['React', 'TypeScript', 'Accessibility', 'SEO', 'Performance', 'Hosting'];
+const technologies = [
+  'TypeScript',
+  'React',
+  'GraphQL',
+  'Apollo',
+  'Node.js',
+  'AWS',
+  'Serverless',
+  'Kafka',
+];
 
-export const ServicesSection = () => {
+export const SkillsSection = () => {
   return (
     <Box as="section" bg="gray.50">
       <Container maxW="6xl" px={4} py={16}>
         <Heading as="h2" size="2xl" mb={8}>
-          What I provide
+          Skills &amp; expertise
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={6}>
-          {services.map((service) => (
+          {skillGroups.map((group) => (
             <Box
-              key={service.title}
+              key={group.title}
               bg="white"
               borderWidth="1px"
               borderColor="gray.200"
@@ -38,22 +45,22 @@ export const ServicesSection = () => {
               p={6}
             >
               <Heading as="h3" size="md" mb={2}>
-                {service.title}
+                {group.title}
               </Heading>
-              <Text color="gray.600">{service.description}</Text>
+              <Text color="gray.600">{group.description}</Text>
             </Box>
           ))}
         </SimpleGrid>
         <HStack gap={2} mt={8} flexWrap="wrap">
-          {skills.map((skill) => (
+          {technologies.map((technology) => (
             <Tag.Root
-              key={skill}
+              key={technology}
               size="md"
               variant="subtle"
               bg="highlight.100"
               color="highlight.900"
             >
-              <Tag.Label>{skill}</Tag.Label>
+              <Tag.Label>{technology}</Tag.Label>
             </Tag.Root>
           ))}
         </HStack>

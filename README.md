@@ -1,5 +1,5 @@
 # cw-website
-Website for Code Wizardry, my personal website.
+Personal portfolio website for Ash Crockett, full-stack software engineer.
 
 ## Formatting and linting
 

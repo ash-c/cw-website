@@ -19,19 +19,17 @@ export const AboutSection = () => {
           />
           <Stack gap={4}>
             <Text fontSize="lg">
-              Based in City, Country, I help small businesses in the region and beyond establish a
-              professional presence online. Replace this placeholder with a note about where you
-              work and who you serve.
+              I&apos;m a full-stack software engineer based in Taranaki, New Zealand. I&apos;ve
+              always enjoyed technology, and I love programming and taking on a good challenge.
             </Text>
             <Text color="gray.600">
-              With a background in software engineering, I bring years of experience building
-              reliable, maintainable web applications. Placeholder text: mention your key skills,
-              technologies, and the kinds of projects you enjoy.
+              My passions include gaming, sim racing, and the technical side of products. I enjoy
+              solving problems for customers, I learn new things quickly, and I have a good memory
+              for the details that matter.
             </Text>
             <Text color="gray.600">
-              Outside of work, family life keeps me grounded and shapes how I work: clear
-              communication, dependable timelines, and genuine care for every client. Placeholder
-              text for a professionally framed note on home life.
+              I&apos;m responsible, honest, hardworking, and punctual. I enjoy working in teams and
+              making a difference through the work I do.
             </Text>
           </Stack>
         </SimpleGrid>

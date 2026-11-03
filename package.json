@@ -1,7 +1,7 @@
 {
   "name": "cw-website",
   "version": "1.0.0",
-  "description": "Website for Code Wizardry, my personal website.",
+  "description": "Personal portfolio website for Ash Crockett, full-stack software engineer.",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",
