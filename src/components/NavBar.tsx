@@ -1,5 +1,6 @@
 import { Box, Flex, HStack, Link as ChakraLink, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
+import { SocialLinks } from './SocialLinks';
 
 export const NavBar = () => {
   return (
@@ -35,6 +36,7 @@ export const NavBar = () => {
           >
             <RouterLink to="/projects">Projects</RouterLink>
           </ChakraLink>
+          <SocialLinks color="whiteAlpha.900" hoverColor="highlight.300" />
         </HStack>
       </Flex>
     </Box>
