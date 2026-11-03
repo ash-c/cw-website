@@ -18,14 +18,13 @@ export const HeroSection = () => {
       <Box position="absolute" inset={0} bg="blackAlpha.600" />
       <VStack position="relative" gap={4} px={4} py={16} textAlign="center" maxW="3xl">
         <Heading as="h1" size={{ base: '4xl', md: '6xl' }} color="white">
-          Code Wizardry
+          Ash Crockett
         </Heading>
         <Text fontSize={{ base: 'xl', md: '2xl' }} fontWeight="semibold" color="highlight.300">
-          Handcrafted websites for small businesses
+          Full-stack software engineer
         </Text>
         <Text fontSize="lg" color="whiteAlpha.900">
-          Placeholder sub-line: fast, modern, and easy-to-manage websites that help local businesses
-          grow online.
+          Based in Taranaki, NZ — I build software that solves real problems for people.
         </Text>
         <Button
           asChild
