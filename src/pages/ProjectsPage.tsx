@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   Heading,
+  HStack,
   Link,
   SimpleGrid,
   Tag,
@@ -38,7 +39,7 @@ export const ProjectsPage = () => {
               </Heading>
               <Text mb={3}>{project.description}</Text>
               <VStack align="flex-start" gap={3}>
-                <Box>
+                <HStack gap={2} flexWrap="wrap">
                   {project.techStack.map((tech) => (
                     <Tag.Root
                       key={tech}
@@ -50,7 +51,7 @@ export const ProjectsPage = () => {
                       <Tag.Label>{tech}</Tag.Label>
                     </Tag.Root>
                   ))}
-                </Box>
+                </HStack>
                 {project.link && (
                   <Link
                     href={project.link}
