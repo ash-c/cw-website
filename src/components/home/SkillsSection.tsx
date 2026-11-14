@@ -10,6 +10,11 @@ const skillGroups = [
     description: 'Node.js, GraphQL APIs, AWS, Serverless, and event streaming with Kafka.',
   },
   {
+    title: 'AI-assisted development',
+    description:
+      'Agentic coding tools such as Devin, GitHub Copilot, Cursor, and Windsurf, with prompt engineering and agent workflows.',
+  },
+  {
     title: 'Soft skills',
     description:
       'Teamwork, mentoring, problem solving, communication, quick learning, and customer service face-to-face, by phone, and online.',
@@ -25,6 +30,7 @@ const technologies = [
   'AWS',
   'Serverless',
   'Kafka',
+  'Devin',
 ];
 
 export const SkillsSection = () => {
@@ -34,7 +40,7 @@ export const SkillsSection = () => {
         <Heading as="h2" size="2xl" mb={8}>
           Skills &amp; expertise
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 3 }} gap={6}>
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} gap={6}>
           {skillGroups.map((group) => (
             <Box
               key={group.title}
