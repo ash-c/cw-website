@@ -3,3 +3,9 @@ declare module '*.svg' {
   // eslint-disable-next-line import/no-default-export
   export default src;
 }
+
+declare module '*.jpg' {
+  const src: string;
+  // eslint-disable-next-line import/no-default-export
+  export default src;
+}

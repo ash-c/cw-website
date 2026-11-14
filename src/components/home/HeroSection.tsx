@@ -1,6 +1,6 @@
 import { Box, Button, Heading, Text, VStack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import heroImage from '../../assets/hero-placeholder.svg';
+import heroImage from '../../assets/mt-taranaki.jpg';
 
 export const HeroSection = () => {
   return (
