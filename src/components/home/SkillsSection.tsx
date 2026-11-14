@@ -11,8 +11,7 @@ const skillGroups = [
   },
   {
     title: 'AI-assisted development',
-    description:
-      'Agentic coding tools such as Devin, GitHub Copilot, Cursor, and Windsurf, with prompt engineering and agent workflows.',
+    description: 'Agentic coding with Devin, including prompt engineering and agent workflows.',
   },
   {
     title: 'Soft skills',
