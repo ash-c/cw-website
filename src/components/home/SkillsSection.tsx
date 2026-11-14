@@ -15,8 +15,7 @@ const skillGroups = [
   },
   {
     title: 'Soft skills',
-    description:
-      'Teamwork, mentoring, problem solving, communication, quick learning, and customer service face-to-face, by phone, and online.',
+    description: 'Teamwork, mentoring, problem solving, communication, and quick learning.',
   },
 ];
 
