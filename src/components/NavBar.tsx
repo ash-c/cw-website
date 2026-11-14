@@ -13,11 +13,19 @@ export const NavBar = () => {
       gradientFrom="primary.500"
       gradientTo="secondary.500"
     >
-      <Flex maxW="6xl" mx="auto" px={4} py={3} align="center" justify="space-between">
-        <Text fontWeight="bold" color="white">
+      <Flex
+        maxW="6xl"
+        mx="auto"
+        px={{ base: 3, sm: 4 }}
+        py={3}
+        gap={2}
+        align="center"
+        justify="space-between"
+      >
+        <Text fontWeight="bold" color="white" whiteSpace="nowrap">
           Ash Crockett
         </Text>
-        <HStack gap={4} align="center">
+        <HStack gap={{ base: 3, sm: 4 }} align="center">
           <ChakraLink
             asChild
             fontWeight="medium"
