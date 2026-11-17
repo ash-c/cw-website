@@ -11,7 +11,7 @@ module.exports = [
   js.configs.recommended,
   ...typescriptEslint.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,mts}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -45,6 +45,15 @@ module.exports = [
       'react/prop-types': 'off',
       'prettier/prettier': 'error',
       'import/no-default-export': 'error',
+    },
+  },
+  {
+    files: ['.devin/vitest.config.mts'],
+    languageOptions: {
+      globals: globals.node,
+    },
+    rules: {
+      'import/no-default-export': 'off',
     },
   },
   {

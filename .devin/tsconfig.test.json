@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node", "webpack-env"]
+  },
+  "include": ["../src", "./vitest.config.mts"],
+  "exclude": []
+}
