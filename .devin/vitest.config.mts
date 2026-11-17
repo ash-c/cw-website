@@ -1,8 +1,11 @@
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 
+const root = fileURLToPath(new URL('../', import.meta.url));
+
 export default defineConfig({
-  root: fileURLToPath(new URL('../', import.meta.url)),
+  root,
+  server: { fs: { allow: [root] } },
   oxc: { jsx: { runtime: 'automatic' } },
   test: {
     environment: 'jsdom',
