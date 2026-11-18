@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   HStack,
-  Link,
   SimpleGrid,
   Tag,
   Text,
@@ -53,23 +52,23 @@ export const ProjectsPage = () => {
                   ))}
                 </HStack>
                 {project.link && (
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    _hover={{ textDecoration: 'none' }}
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    borderColor="primary.500"
+                    color="primary.600"
+                    _hover={{
+                      bg: 'primary.50',
+                      borderColor: 'primary.600',
+                      textDecoration: 'none',
+                    }}
+                    _active={{ bg: 'primary.100' }}
                   >
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      borderColor="primary.500"
-                      color="primary.600"
-                      _hover={{ bg: 'primary.50', borderColor: 'primary.600' }}
-                      _active={{ bg: 'primary.100' }}
-                    >
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
                       View Project
-                    </Button>
-                  </Link>
+                    </a>
+                  </Button>
                 )}
               </VStack>
             </Box>
