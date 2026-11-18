@@ -50,3 +50,6 @@ coverage/
 out/
 storybook-static/
 
+
+### Personal agent rules
+AGENTS.local.md

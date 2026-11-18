@@ -1,4 +1,26 @@
-# Project checks and UI tests
+# cw-website
+
+Ash Crockett's portfolio: a React 19 + TypeScript SPA styled with Chakra UI 3 (Emotion), routed with react-router-dom 7, bundled by webpack 5, deployed to Netlify.
+
+## Commands
+
+- `npm run start`: dev server on http://localhost:3000. `npm run build`: production bundle in `dist/`.
+- `npm run lint` / `lint:fix` (ESLint 9 flat config), `npm run format` / `format:check` (Prettier), `npm run typecheck`, `npm test`.
+- Use npm (`package-lock.json`); don't add another lockfile.
+
+## Conventions
+
+- Components are named arrow-function exports (`export const NavBar = () => ...`); ESLint forbids default exports.
+- Style with Chakra primitives, style props, and tokens in `src/theme.ts`. Don't add CSS files; the webpack CSS rule is unused.
+- Import images as modules; add a type in `src/assets.d.ts` for any new extension (only `*.svg` and `*.jpg` exist).
+- Pages live in `src/pages/` and are lazy-loaded in `src/App.tsx`. Shared components go in `src/components/`; page-specific sections in `src/components/<page>/` (e.g. `home/`).
+- Netlify reads `netlify.toml`: `npm run build`, publish `dist`, Node 24, and a `/* -> /index.html` SPA redirect.
+
+## Decisions
+
+Read the relevant records in `docs/adr/` before changing tooling or structure. Add a new ADR (copy `docs/adr/0000-template.md`) for any significant decision, and mark ones it replaces as Superseded.
+
+## Project checks and UI tests
 
 Use Node 24 and npm with the checked-in lockfile. Node 24.13.1 with npm 11.8.0 is a verified local pairing; CI and Netlify use Node 24.
 
