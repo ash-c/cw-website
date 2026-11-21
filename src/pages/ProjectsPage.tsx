@@ -8,7 +8,7 @@ const cardStyles = {
   display: 'grid',
   gridTemplateRows: 'subgrid',
   gridRow: `span ${cardRows}`,
-  rowGap: 0,
+  mb: 6,
   bg: 'white',
   borderWidth: '1px',
   borderColor: 'gray.200',
@@ -95,7 +95,7 @@ export const ProjectsPage = () => {
           A selection of my personal projects and professional work.
         </Text>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="full">
+        <SimpleGrid columns={{ base: 1, md: 2 }} columnGap={6} rowGap={0} w="full">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
