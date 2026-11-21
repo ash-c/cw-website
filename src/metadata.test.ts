@@ -87,6 +87,12 @@ describe('index.html metadata', () => {
     'https://preview-test.example.com/blog',
     'https://preview-test.example.com/?ref=1',
     'https://localhost',
+    'https://localhost.',
+    'https://app.localhost',
+    'https://127.0.0.2',
+    'https://192.168.1.10',
+    'https://[::1]',
+    'https://intranet',
     'not a url',
   ])('rejects invalid SITE_URL %s', (siteUrl) => {
     expect(() => loadTemplateParameters(siteUrl)).toThrow(/SITE_URL must be a public HTTPS origin/);

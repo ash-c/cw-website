@@ -1,6 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const isPublicHostname = (hostname) =>
+  hostname.includes(".") &&
+  !hostname.endsWith(".") &&
+  !hostname.endsWith(".localhost") &&
+  !hostname.startsWith("[") &&
+  !/^[\d.]+$/.test(hostname);
+
 const parseSiteUrl = (value) => {
   if (value === undefined || value.trim() === "") {
     return undefined;
@@ -22,7 +29,7 @@ const parseSiteUrl = (value) => {
     url.pathname !== "/" ||
     url.search ||
     url.hash ||
-    ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname)
+    !isPublicHostname(url.hostname)
   ) {
     throw invalid();
   }
