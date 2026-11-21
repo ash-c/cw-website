@@ -10,6 +10,9 @@ const HomePage = React.lazy(() =>
 const ProjectsPage = React.lazy(() =>
   import('./pages/ProjectsPage').then((module) => ({ default: module.ProjectsPage })),
 );
+const ProjectDetailPage = React.lazy(() =>
+  import('./pages/ProjectDetailPage').then((module) => ({ default: module.ProjectDetailPage })),
+);
 
 export const App = () => {
   return (
@@ -20,6 +23,7 @@ export const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/projects/:slug" element={<ProjectDetailPage />} />
             </Routes>
           </Suspense>
         </Layout>
