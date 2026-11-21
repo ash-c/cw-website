@@ -39,7 +39,7 @@ it('shows the APS case study with its sections, technologies, and demo link', ()
   ]);
 
   expect(screen.getAllByText(/The Access Group NZ/).length).toBeGreaterThan(0);
-  expect(screen.getByText(/I primarily develop APS NZ Tax/)).toBeVisible();
+  expect(screen.getByText(/I primarily work on APS NZ Tax/)).toBeVisible();
   expect(screen.getByText(/file them directly with IRD/)).toBeVisible();
   expect(
     screen.getByText(/Kafka synchronises data between the two in both directions/),

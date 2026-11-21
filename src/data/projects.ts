@@ -39,7 +39,7 @@ export const projects: Project[] = [
     slug: 'access-aps-nz',
     title: 'Access APS NZ',
     description:
-      'Through my work at The Access Group NZ, I primarily develop APS NZ Tax, helping accountants prepare and file tax returns directly with IRD while moving tax preparation from desktop software to the cloud.',
+      'Through my work at The Access Group NZ, I primarily work on APS NZ Tax, helping accountants prepare and file tax returns directly with IRD.',
     techStack: ['TypeScript', 'React', 'Serverless', 'AWS', 'Kafka'],
     details: {
       introduction:
@@ -48,7 +48,7 @@ export const projects: Project[] = [
         {
           title: 'Overview',
           paragraphs: [
-            'At The Access Group NZ, I primarily develop APS NZ Tax. It helps accountants prepare tax returns and file them directly with IRD.',
+            'At The Access Group NZ, I primarily work on APS NZ Tax. It helps accountants prepare tax returns and file them directly with IRD.',
           ],
         },
         {

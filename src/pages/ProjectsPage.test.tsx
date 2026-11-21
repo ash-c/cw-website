@@ -72,7 +72,7 @@ it('makes the whole APS card a single link to its detail page', () => {
 
   const card = within(link);
   expect(card.getByRole('heading', { level: 2, name: 'Access APS NZ' })).toBeVisible();
-  expect(card.getByText(/I primarily develop APS NZ Tax/)).toBeVisible();
+  expect(card.getByText(/I primarily work on APS NZ Tax/)).toBeVisible();
   expect(card.getByText('Kafka')).toBeVisible();
   expect(card.getByText('Read more')).toBeVisible();
   expect(card.queryByRole('link')).not.toBeInTheDocument();
