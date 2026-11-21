@@ -2,11 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Ash Crockett</title>
+    <title>Ash Crockett | Full-stack software engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Full-stack software engineer based in Taranaki, New Zealand. I build software that solves real problems for people."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ash Crockett" />
+    <meta property="og:title" content="Ash Crockett | Full-stack software engineer" />
+    <meta
+      property="og:description"
+      content="Full-stack software engineer based in Taranaki, New Zealand. I build software that solves real problems for people."
+    />
+    <% if (siteUrl) { %>
+    <link rel="canonical" href="<%- new URL('/', siteUrl).href %>" />
+    <meta property="og:url" content="<%- new URL('/', siteUrl).href %>" />
+    <meta
+      property="og:image"
+      content="<%- new URL(require('../src/assets/mt-taranaki.jpg'), siteUrl).href %>"
+    />
+    <meta
+      property="og:image:alt"
+      content="Snow-capped Mount Taranaki reflected in a still alpine tarn at sunrise"
+    />
+    <% } %>
   </head>
   <body>
     <div id="root"></div>
   </body>
 </html>
-
