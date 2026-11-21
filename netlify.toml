@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "24"
+  SITE_URL = "https://ashcrockett.netlify.app"
 
 [[redirects]]
   from = "/*"
