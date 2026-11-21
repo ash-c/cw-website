@@ -32,8 +32,7 @@ export const projects: Project[] = [
   {
     slug: 'portfolio-website',
     title: 'Portfolio Website',
-    description:
-      'I designed and built this portfolio to share my work, experience, and interests, using React, TypeScript, and Chakra UI.',
+    description: 'I designed and built this portfolio to share my work, experience, and interests.',
     techStack: ['React', 'TypeScript', 'Chakra UI'],
   },
   {
