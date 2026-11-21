@@ -24,7 +24,31 @@ it('opens the projects page directly at /projects', async () => {
   render(<App />);
 
   expect(await screen.findByRole('heading', { level: 1, name: 'Projects' })).toBeVisible();
-  expect(screen.getByRole('heading', { level: 2, name: 'Project One' })).toBeVisible();
+  expect(screen.getByRole('heading', { level: 2, name: 'Access APS NZ' })).toBeVisible();
+});
+
+it('opens the APS detail page directly at /projects/access-aps-nz', async () => {
+  window.history.replaceState(null, '', '/projects/access-aps-nz');
+  render(<App />);
+
+  expect(await screen.findByRole('heading', { level: 1, name: 'Access APS NZ' })).toBeVisible();
+  expect(
+    screen.getByRole('link', { name: 'Watch the APS NZ software demo on YouTube' }),
+  ).toBeVisible();
+});
+
+it('navigates from the APS card to its detail page and back to projects', async () => {
+  const user = userEvent.setup();
+  window.history.replaceState(null, '', '/projects');
+  render(<App />);
+
+  await user.click(await screen.findByRole('link', { name: 'Access APS NZ' }));
+  expect(await screen.findByRole('heading', { level: 1, name: 'Access APS NZ' })).toBeVisible();
+  expect(window.location.pathname).toBe('/projects/access-aps-nz');
+
+  await user.click(screen.getByRole('link', { name: 'Back to projects' }));
+  expect(await screen.findByRole('heading', { level: 1, name: 'Projects' })).toBeVisible();
+  expect(window.location.pathname).toBe('/projects');
 });
 
 it('navigates from Home to Projects and back via the header', async () => {
