@@ -44,3 +44,11 @@ npm run check
 Each production TypeScript file under `src/` must reach 80% statements, branches, functions, and lines, even if no test imports it. Only the browser bootstrap (`src/index.tsx`), type declarations (`src/**/*.d.ts`), colocated tests (`src/**/*.test.{ts,tsx}`), and test infrastructure (`src/testing/**`) are excluded because they are not production UI or supporting logic under test. Cover the theme, icons, and project data through the real UI. Never lower a threshold or exclude production code to make a check pass.
 
 Run `npm run test:coverage` for the whole gate and open `coverage/index.html` for file-level details. The runner config in `.devin/`, DOM setup, and test conventions can be copied. Adapt the Chakra system and router wrapper for the destination project; no shared package is needed.
+
+## Site metadata and SITE_URL
+
+- `public/index.html` holds the static SEO and Open Graph tags (title, description, `og:*`) so crawlers read them without JavaScript. Every SPA route shares this site-level metadata; don't add a runtime head manager for it.
+- `SITE_URL` is an optional build variable read in `webpack.config.js`. It must be a public HTTPS origin (no path, query, fragment, credentials, or localhost); a trailing slash is stripped and invalid values fail the build. When set, the template adds `canonical`, `og:url`, `og:image` (the hashed `src/assets/mt-taranaki.jpg`, resolved via `require` in the template), and `og:image:alt`. When unset (local and CI builds), those URL tags are omitted.
+- Netlify sets `SITE_URL` in `netlify.toml` (currently `https://ashcrockett.netlify.app`). Update it there when the custom domain is confirmed; a value in `netlify.toml` overrides one set in the Netlify UI.
+- Test locally with a clearly fake origin, e.g. `SITE_URL=https://preview-test.example.com npm run build`, and check `dist/index.html`'s `og:image` names a JPG in `dist/`. Don't commit that output. `src/metadata.test.ts` covers the template and URL validation.
+- After deploying, fetch the public HTML and the `og:image` URL with `curl -sI`; the image must return `content-type: image/jpeg`, not the SPA fallback HTML. Then run the URL through LinkedIn Post Inspector (https://www.linkedin.com/post-inspector/) to refresh LinkedIn's cache and check the card.
